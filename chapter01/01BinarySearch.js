@@ -22,5 +22,5 @@ function binarySearch(list, item) {
 
 let myList = [1, 3, 5, 7, 9];
 
-console.log(binarySearch(myList, 3));
-console.log(binarySearch(myList, -1));
+// console.log(binarySearch(myList, 3));
+// console.log(binarySearch(myList, -1));
