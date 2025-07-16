@@ -42,7 +42,7 @@ function quicksort(array) {
     let pivot = array[0];
     let minors = array.slice(1).filter(i => i <= pivot);
     let bigger = array.slice(1).filter(i => i > pivot);
-    return quicksort(minors) + [pivot] + [quicksort(bigger)];
+    return quicksort(minors) + [pivot] + quicksort(bigger);
   }
 }
 
