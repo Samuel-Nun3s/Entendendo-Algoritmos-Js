@@ -7,7 +7,7 @@ function sum(list) {
   return total;
 }
 
-console.log(sum([1, 2, 3, 4]));
+// console.log(sum([1, 2, 3, 4]));
 
 
 function counter(list) {
@@ -19,7 +19,7 @@ function counter(list) {
   }
 }
 
-console.log(counter([1,2,3,4]));
+// console.log(counter([1,2,3,4]));
 
 function findHigherValue(list) {
   if (list.length === 1) {
@@ -30,10 +30,20 @@ function findHigherValue(list) {
 
   let maxRest = findHigherValue(list);
 
-  console.log(`${last} > ${maxRest} ? ${last} : ${maxRest}`);
-  let teste = last > maxRest ? last : maxRest;
-  console.log(teste);
   return last > maxRest ? last : maxRest;
 }
 
-console.log(findHigherValue([1,4,9,12]))
+// console.log(findHigherValue([1, 25, 9, 12]))
+
+function quicksort(array) {
+  if (array.length < 2) {
+    return array;
+  } else {
+    let pivot = array[0];
+    let minors = array.slice(1).filter(i => i <= pivot);
+    let bigger = array.slice(1).filter(i => i > pivot);
+    return quicksort(minors) + [pivot] + [quicksort(bigger)];
+  }
+}
+
+console.log(quicksort([10, 5, 2, 3]));
